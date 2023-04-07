@@ -49,7 +49,7 @@ const router = createRouter({
 const app = createApp(App);
 
 app.config.globalProperties.$hostname =
-  process.env.NODE_ENV === "production" ? "" : "https://localhost:7283";
+  process.env.NODE_ENV === "production" ? "https://raionapi20230407235334.azurewebsites.net/" : "https://localhost:7283";
 
 app.use(router);
 app.use(LoadingPlugin, {
