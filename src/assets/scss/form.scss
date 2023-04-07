@@ -1,0 +1,157 @@
+.btn {
+    border-radius: 10px;
+    padding: 9px 20px;
+    height: 40px;
+    font-weight: 600;
+    &.btn-primary {
+        color: $white;
+        &.disabled {
+            border-color: #bdc3c7;
+            background-color: #bdc3c7;
+        }
+    }
+    &.btn-outline-primary {
+        &:hover,
+        &:focus,
+        &:active,
+        &.show {
+            color: $white;
+            background-color: $primary;
+        }
+    }
+    &.btn-lg {
+        height: 48px;
+        font-size: 14px;
+    }
+    &.btn-link {
+        text-decoration: none;
+    }
+}
+
+.form-control,
+.form-select {
+    color: $dark;
+    font-weight: 600;
+    border-color: #ecf0f1;
+    border-radius: 10px;
+    &:focus {
+        box-shadow: none;
+        border-color: #ecf0f1;
+    }
+}
+.form-select {
+    background-image: url(../images/select-arrow-primary2.svg);
+    background-size: 10px auto;
+}
+.form-check-input {
+    border-radius: 5px;
+    &:focus {
+        box-shadow: none;
+    }
+}
+.checkbox-row {
+    padding: 10px;
+    background: rgba(236, 240, 241, 0.4);
+    border-radius: 10px;
+    &.checked-row {
+        background-color: rgba($primary, 0.1);
+    }
+}
+.form-check {
+    padding-left: 0;
+    position: relative;
+    .form-check-input {
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        z-index: 1;
+        margin-left: 0;
+        &:checked {
+            + .form-check-label {
+                &::before {
+                    border-color: $primary;
+                    background-color: $primary;
+                    background-image: url(../images/icon-checkmark-right.svg);
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                }
+            }
+        }
+    }
+    .form-check-label {
+        padding-left: 28px;
+        position: relative;
+        font-weight: 600;
+        &::before {
+            content: " ";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #ecf0f1;
+            background-color: $white;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+    }
+}
+.error-msg {
+    font-size: 10px;
+    color: #e74c3c;
+    font-weight: 600;
+    padding-left: 16px;
+    background: url(../images/icon-error-msg.svg) no-repeat left center;
+}
+.form-floating {
+    > label {
+        font-weight: 600;
+        color: #bdc3c7;
+        padding: 0.75rem 0.75rem;
+    }
+    > .form-control {
+        height: 3rem;
+        &:focus {
+            border-color: #ecf0f1;
+            ~ label {
+                color: #7f8c8d;
+                opacity: 1;
+            }
+        }
+        &.input-error {
+            border: 1px solid #e74c3c;
+        }
+        &:not(:placeholder-shown) {
+            ~ label {
+                color: #7f8c8d;
+                opacity: 1;
+            }
+        }
+    }
+    > .form-select {
+        height: 3rem;
+        padding: 0.75rem 0.75rem;
+    }
+}
+.input-group-block {
+    display: flex;
+    .form-control {
+        height: 48px;
+        padding: 13px 16px;
+        flex: 1;
+        border-color: rgba(236, 240, 241, 0.6);
+        background-color: rgba(236, 240, 241, 0.6);
+    }
+    .input-action-block {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        .icon-link {
+            margin-left: 12px;
+            img {
+                width: 20px;
+            }
+        }
+    }
+}

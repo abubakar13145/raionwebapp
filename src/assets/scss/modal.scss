@@ -1,0 +1,44 @@
+.modal-btn-row {
+    display: flex;
+    margin: 0 -8px;
+    justify-content: space-between;
+    .btn {
+        margin: 0 8px;
+        width: 50%;
+        &.btn-link {
+            width: auto;
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+.modal-title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+}
+.modal-sub-title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    margin-bottom: 8px;
+}
+.modal-content {
+    border: 0;
+}
+.form-modal {
+    .modal-dialog {
+        max-width: 420px;
+        .modal-content {
+            box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+            border-radius: 16px;
+        }
+        .modal-body {
+            padding: 32px;
+            .modal-title {
+                text-align: center;
+                margin-bottom: 12px;
+            }
+        }
+    }
+}
